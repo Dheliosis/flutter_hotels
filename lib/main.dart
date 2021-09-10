@@ -86,7 +86,7 @@ class SearchSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.grey[100],
-      padding: EdgeInsets.fromLTRB(20, 25, 20, 10),
+      padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
       child: Column(
         children: [
           Row(
