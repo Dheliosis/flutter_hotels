@@ -293,7 +293,9 @@ class HotelFilterSection extends StatelessWidget {
 
 class HotelList extends StatelessWidget {
   final List hotelList;
+
   HotelList(this.hotelList);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -306,7 +308,9 @@ class HotelList extends StatelessWidget {
 
 class HotelCard extends StatelessWidget {
   final Map hotelData;
+
   HotelCard(this.hotelData);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -335,9 +339,11 @@ class HotelCard extends StatelessWidget {
   }
 }
 
-class HotelImage extends StatelessWidget{
+class HotelImage extends StatelessWidget {
   final String image;
+
   HotelImage(this.image);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -376,40 +382,44 @@ class HotelImage extends StatelessWidget{
   }
 }
 
-class HotelTitle extends StatelessWidget{
+class HotelTitle extends StatelessWidget {
   final String title;
   final int price;
+
   HotelTitle(this.title, this.price);
+
   @override
   Widget build(BuildContext context) {
-   return Container(
-     margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
-     child: Row(
-       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-       children: [
-         Text(
-           title,
-           style: GoogleFonts.nunito(
-               fontSize: 18, fontWeight: FontWeight.w800),
-         ),
-         Text(
-           "\$" + price.toString(),
-           style: GoogleFonts.nunito(
-               fontSize: 18, fontWeight: FontWeight.w800),
-         ),
-       ],
-     ),
-   );
+    return Container(
+      margin: EdgeInsets.fromLTRB(10, 10, 10, 0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style:
+                GoogleFonts.nunito(fontSize: 18, fontWeight: FontWeight.w800),
+          ),
+          Text(
+            "\$" + price.toString(),
+            style:
+                GoogleFonts.nunito(fontSize: 18, fontWeight: FontWeight.w800),
+          ),
+        ],
+      ),
+    );
   }
 }
 
-class HotelLocalisation extends StatelessWidget{
+class HotelLocalisation extends StatelessWidget {
   final String place;
   final int distance;
+
   HotelLocalisation(this.place, this.distance);
+
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       margin: EdgeInsets.symmetric(horizontal: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -423,7 +433,9 @@ class HotelLocalisation extends StatelessWidget{
                     color: Colors.grey[500],
                     fontWeight: FontWeight.w400),
               ),
-              SizedBox(width: 10,),
+              SizedBox(
+                width: 10,
+              ),
               Row(
                 children: [
                   Icon(
@@ -455,9 +467,11 @@ class HotelLocalisation extends StatelessWidget{
   }
 }
 
-class HotelNotation extends StatelessWidget{
+class HotelNotation extends StatelessWidget {
   final int reviews;
+
   HotelNotation(this.reviews);
+
   @override
   Widget build(BuildContext context) {
     return Container(
