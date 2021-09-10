@@ -311,7 +311,6 @@ class HotelCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10),
-      height: 230,
       width: double.infinity,
       decoration: BoxDecoration(
           color: Colors.white,
@@ -328,7 +327,7 @@ class HotelCard extends StatelessWidget {
         children: [
           HotelImage(hotelData['picture']),
           HotelTitle(hotelData['title'], hotelData['price']),
-         HotelLocalisation(hotelData['place'], hotelData['distance']),
+          HotelLocalisation(hotelData['place'], hotelData['distance']),
           HotelNotation(hotelData['review']),
         ],
       ),
@@ -342,7 +341,7 @@ class HotelImage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 140,
+      height: 180,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(18),
@@ -415,26 +414,31 @@ class HotelLocalisation extends StatelessWidget{
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-           place,
-            style: GoogleFonts.nunito(
-                fontSize: 14,
-                color: Colors.grey[500],
-                fontWeight: FontWeight.w400),
-          ),
           Row(
             children: [
-              Icon(
-                Icons.place,
-                color: d_green,
-                size: 14.0,
-              ),
               Text(
-               distance.toString() + 'km to city',
+                place,
                 style: GoogleFonts.nunito(
                     fontSize: 14,
                     color: Colors.grey[500],
                     fontWeight: FontWeight.w400),
+              ),
+              SizedBox(width: 10,),
+              Row(
+                children: [
+                  Icon(
+                    Icons.place,
+                    color: d_green,
+                    size: 14.0,
+                  ),
+                  Text(
+                    distance.toString() + 'km to city',
+                    style: GoogleFonts.nunito(
+                        fontSize: 14,
+                        color: Colors.grey[500],
+                        fontWeight: FontWeight.w400),
+                  ),
+                ],
               ),
             ],
           ),
@@ -457,7 +461,7 @@ class HotelNotation extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(10, 3, 10, 0),
+      margin: EdgeInsets.fromLTRB(10, 3, 10, 10),
       child: Row(
         children: [
           Row(
