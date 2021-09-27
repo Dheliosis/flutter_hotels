@@ -1,6 +1,13 @@
 # hotels
 
-A new Flutter project.
+A new Flutter project based on the [video of Driss AS](https://www.youtube.com/watch?v=yI8_kXpMeps&t=36s).
+
+# Informations
+This is my second flutter project.
+
+I Followed Driss As' video from begginning to end : [Flutter Tutorial Français: Créer Le Design D’une Application De Réservation d'Hôtel Avec Flutter](https://www.youtube.com/watch?v=yI8_kXpMeps&t=36s). And I made some modifications to try to improve the code proposed in the video.
+
+This application is 2 pages of booking application. One is the hotels' list and the second is a calendar to select the desired reservation days. 
 
 ## Getting Started
 
