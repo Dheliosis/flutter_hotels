@@ -7,7 +7,6 @@ final kFirstDay = DateTime(kNow.year, kNow.month - 3, kNow.day);
 final kLastDay = DateTime(kNow.year, kNow.month - 3, kNow.day);
 const d_green = Color(0xFF54D3C2);
 
-
 class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -76,8 +75,7 @@ class PeriodSection extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
-                      color: Colors.grey[700]
-                  ),
+                      color: Colors.grey[700]),
                 ),
                 SizedBox(
                   height: 4,
@@ -106,8 +104,7 @@ class PeriodSection extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
-                      color: Colors.grey[700]
-                  ),
+                      color: Colors.grey[700]),
                 ),
                 SizedBox(
                   height: 4,
@@ -193,8 +190,8 @@ class _CalendarRangeState extends State<CalendarRange> {
         ),
         firstDay: kFirstDay,
         rangeSelectionMode: _rangeSelectionMode,
-        onDaySelected: (selectedDay, focusedDay){
-          if(!isSameDay(_selectedDay, selectedDay)) {
+        onDaySelected: (selectedDay, focusedDay) {
+          if (!isSameDay(_selectedDay, selectedDay)) {
             setState(() {
               _selectedDay = selectedDay;
               _focusedDay = focusedDay;
@@ -204,7 +201,7 @@ class _CalendarRangeState extends State<CalendarRange> {
             });
           }
         },
-        onRangeSelected: (start, end ,focusedDay){
+        onRangeSelected: (start, end, focusedDay) {
           setState(() {
             _selectedDay = null;
             _focusedDay = focusedDay;
@@ -213,14 +210,14 @@ class _CalendarRangeState extends State<CalendarRange> {
             _rangeSelectionMode = RangeSelectionMode.toggledOn;
           });
         },
-        onFormatChanged: (format){
-          if(_calendarFormat != format){
+        onFormatChanged: (format) {
+          if (_calendarFormat != format) {
             setState(() {
               _calendarFormat = format;
             });
           }
         },
-        onPageChanged: (focusedDay){
+        onPageChanged: (focusedDay) {
           _focusedDay = focusedDay;
         },
       ),
@@ -228,8 +225,9 @@ class _CalendarRangeState extends State<CalendarRange> {
   }
 }
 
-class ValidateBookingSection extends StatelessWidget{
+class ValidateBookingSection extends StatelessWidget {
   final selectedRadio = 1;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -246,23 +244,21 @@ class ValidateBookingSection extends StatelessWidget{
                 fontSize: 20.0,
               ),
             ),
-            onChanged: null
-        ),
+            onChanged: null),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
           width: double.infinity,
           child: ElevatedButton(
             child: Text(
               'Apply',
-              style: TextStyle( fontSize: 17),
+              style: TextStyle(fontSize: 17),
             ),
             style: ElevatedButton.styleFrom(
-              primary: d_green,
-              padding: EdgeInsets.all(15),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
-              )
-            ),
+                primary: d_green,
+                padding: EdgeInsets.all(15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30.0),
+                )),
             onPressed: () {
               print('Apply Booking');
               Navigator.pop(context);
